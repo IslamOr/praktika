@@ -1,0 +1,58 @@
+﻿<Page x:Class="praktika.page.admin.PageGameResults"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:praktika.page.admin"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="PageGameResults">
+
+    <Grid>
+
+        <Border BorderBrush="White" Background="White"  BorderThickness="0" Width="400" CornerRadius="30" HorizontalAlignment="Left" Margin="84,219,0,42">
+            <DataGrid  x:Name="DG" Margin="20" AutoGenerateColumns="False" Background="{x:Null}" BorderBrush="White" Foreground="Black" Height="700" >
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn x:Name="Имя" Header="Имя" Width="*" Binding="{Binding Users.Name}" FontSize="22"/>
+                    <DataGridTextColumn x:Name="Фамилия" Header="Фамилия" Width="*" Binding="{Binding Users.Surname}" FontSize="22"/>
+
+                </DataGrid.Columns>
+            </DataGrid>
+        </Border>
+
+        <Border BorderBrush="White" Background="White"  BorderThickness="0" Width="400" CornerRadius="30" HorizontalAlignment="Left" Margin="532,219,0,42">
+            <DataGrid  x:Name="DG1" Margin="20" AutoGenerateColumns="False" Background="{x:Null}" BorderBrush="White" Foreground="Black" Height="700" >
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn  Header="Игра" Width="*" Binding="{Binding GameID}" FontSize="22"/>
+                    <DataGridTextColumn  Header="Статус" Width="*" Binding="{Binding StatusID}" FontSize="22"/>
+
+                </DataGrid.Columns>
+            </DataGrid>
+        </Border>
+
+
+        <Border BorderBrush="White" Background="White"  BorderThickness="0" Width="400" CornerRadius="30" HorizontalAlignment="Left" Margin="986,219,0,42">
+            <DataGrid  x:Name="DG2" Margin="20" AutoGenerateColumns="False" Background="{x:Null}" BorderBrush="White" Foreground="Black" Height="700" >
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn  Header="Игра" Width="*" Binding="{Binding GameID}" FontSize="22"/>
+                    <DataGridTextColumn  Header="Статус" Width="*" Binding="{Binding StatusID}" FontSize="22"/>
+
+                </DataGrid.Columns>
+            </DataGrid>
+        </Border>
+
+        <Border BorderBrush="White" Background="White"  BorderThickness="0" Width="400" CornerRadius="30" HorizontalAlignment="Left" Margin="1438,219,0,42">
+            <DataGrid  x:Name="DG3" Margin="20" AutoGenerateColumns="False" Background="{x:Null}" BorderBrush="White" Foreground="Black" Height="700" >
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn  Header="Игра" Width="*" Binding="{Binding GameID}" FontSize="22"/>
+                    <DataGridTextColumn  Header="Статус" Width="*" Binding="{Binding StatusID}" FontSize="22"/>
+
+                </DataGrid.Columns>
+            </DataGrid>
+        </Border>
+    </Grid>
+</Page>

@@ -1,0 +1,50 @@
+﻿<Page x:Class="praktika.page.game.game3"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:praktika.page.game"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="Игра 3">
+
+    <Grid>
+        <Grid.Background >
+            <ImageBrush ImageSource="/Image/game3.image/bg1.jpeg" />
+        </Grid.Background>
+        <Grid Height="auto" Width="auto" Grid.RowSpan="1" Grid.ColumnSpan="4">
+            <Label Content="Пазл"  VerticalAlignment="Bottom" FontSize="100" Margin="30" FontWeight="Bold"  HorizontalAlignment="Center" Foreground="White"  />
+        </Grid>
+        
+        <Image Source="/Image/game3.image/01.jpg"  Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" Name="i01"  AllowDrop="True" DragEnter="i01_DragEnter" Drop="i01_Drop"/>
+        <Image Source="/Image/game3.image/02.jpg"  Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Name="i02" AllowDrop="True" DragEnter="i02_DragEnter" Drop="i02_Drop"/>
+        <Image Source="/Image/game3.image/03.jpg"  Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" Name="i03" AllowDrop="True" DragEnter="i03_DragEnter" Drop="i03_Drop" />
+        <Image Source="/Image/game3.image/04.jpg"  Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" Name="i04" AllowDrop="True"  DragEnter="i04_DragEnter" Drop="i04_Drop"/>
+        <Image Source="/Image/game3.image/05.jpg"  Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" Name="i05" AllowDrop="True"  DragEnter="i05_DragEnter" Drop="i05_Drop"/>
+        <Image Source="/Image/game3.image/06.jpg"  Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" Name="i06" AllowDrop="True"  DragEnter="i06_DragEnter" Drop="i06_Drop"/>
+        
+        <Image Source="/Image/game3.image/1.jpg"  Grid.Row="3" Grid.Column="3" Name="i1" MouseDown="i1_MouseDown"/>
+        <Image Source="/Image/game3.image/2.jpg"  Grid.Row="3" Grid.Column="2" Name="i2" MouseDown="i2_MouseDown"/>
+        <Image Source="/Image/game3.image/3.jpg"  Grid.Row="2" Grid.Column="3" Name="i3" MouseDown="i3_MouseDown"/>
+        <Image Source="/Image/game3.image/4.jpg"  Grid.Row="2" Grid.Column="2" Name="i4" MouseDown="i4_MouseDown"/>
+        <Image Source="/Image/game3.image/5.jpg"  Grid.Row="1" Grid.Column="2" Name="i5" MouseDown="i5_MouseDown"/>
+        <Image Source="/Image/game3.image/6.jpg"  Grid.Row="1" Grid.Column="3" Name="i6" MouseDown="i6_MouseDown"/>
+        <Button Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="4" Width="400" Height="100" Background="{x:Null}" BorderBrush="{x:Null}" Click="Button_Click">
+            <Image Source="/Image/game2.image/ok.png" />
+        </Button>
+        <TextBlock x:Name="tbx" Text="1"  Opacity="0"/>
+        <Grid.RowDefinitions >
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition  />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+    </Grid>
+</Page>

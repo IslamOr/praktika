@@ -1,0 +1,47 @@
+﻿<Page x:Class="praktika.page.admin.PageAddUser"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:praktika.page.admin"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="Страница Добавления Пользователя">
+
+    <Grid>
+        <Grid.Background >
+            <ImageBrush ImageSource="/Image/adduser.img/b1.jpg" />
+        </Grid.Background>
+        <Grid Height="800" Width="1500" x:Name="Gr">
+            <Grid.Background >
+                <ImageBrush ImageSource="/Image/adduser.img/b2.jpg" />
+            </Grid.Background>
+            <Label Content="Добавить Пользователя" Foreground="White" FontSize="72" Width="1000" Height="100" FontWeight="Bold" Margin="66,156,434,544"/>
+            <Label Content="Имя" Foreground="White" FontSize="24" Height="50" Width="100" Margin="66,311,1334,439"/>
+            <Border BorderBrush="White" BorderThickness="2"   Width="300" Height="60"  CornerRadius="20" Margin="66,361,1134,379" >
+                <TextBox Text="{Binding Name}" x:Name="TbName" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White"  VerticalAlignment="Center" Height="40" FontSize="24" FontWeight="Bold"/>
+            </Border>
+            <Label  Content="Фамилия" Foreground="White" FontSize="24" Height="50" Margin="425,311,964,439" />
+            <Border BorderBrush="White" BorderThickness="2"   Width="300" Height="60"  CornerRadius="20" Margin="425,361,775,379" >
+                <TextBox Text="{Binding Surname}" x:Name="TbSurname" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" VerticalAlignment="Center" Height="40" FontSize="24" FontWeight="Bold" />
+            </Border>
+
+            <Label Content="Отчество" Foreground="White" FontSize="24" Height="50" Margin="66,444,-66,306" />
+            <Border BorderBrush="White" BorderThickness="2"   Width="300" Height="60"  CornerRadius="20" Margin="66,499,1134,241" >
+                <TextBox Text="{Binding Patronymic}" x:Name="TbPatronym" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" VerticalAlignment="Center" Height="40" FontSize="24" FontWeight="Bold" />
+            </Border>
+            <Label Content="Логин" Foreground="White" FontSize="24" Height="50" Margin="425,449,992,301"/>
+            <Border BorderBrush="White" BorderThickness="2"   Width="140" Height="60"  CornerRadius="20" Margin="425,499,935,241" >
+                <TextBox Text="{Binding Login}" x:Name="TbLogin" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White"  VerticalAlignment="Center" Height="40" FontSize="24" FontWeight="Bold"/>
+            </Border>
+            <Label Content="Пароль" Foreground="White" FontSize="24" Height="50" Margin="585,449,808,301"/>
+            <Border BorderBrush="White" BorderThickness="2"   Width="140" Height="60"  CornerRadius="20" Margin="585,499,775,241" >
+                <TextBox Text="{Binding Password}" x:Name="TbPass" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White"  VerticalAlignment="Center" Height="40" FontSize="24" FontWeight="Bold"/>
+            </Border>
+            <Label Content="Роль" Foreground="White" FontSize="24" Height="50" Margin="766,311,-766,439" />
+            <ComboBox x:Name="cbRole" Margin="766,361,565,400" SelectedItem="{Binding Role, Mode=TwoWay}" DisplayMemberPath="RoleName" FontSize="24" />
+            <Button Click="Save_Click"  FontSize="24" Height="50" Width="140" Content="Сохранить" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Margin="76,614,1284,136" FontWeight="Bold" />
+            <Button Click="Button_Click"  FontSize="24" Height="50" Width="140" Content="Назад" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Margin="76,669,1284,81"  />
+        </Grid>
+    </Grid>
+</Page>

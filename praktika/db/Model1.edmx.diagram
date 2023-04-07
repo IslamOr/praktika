@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a2d0b6ec13fc49f9820d206f9910399c" Name="Diagram1">
+        <EntityTypeShape EntityType="preschoolModel.Game" Width="1.5" PointX="0.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="preschoolModel.GameStatus" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="preschoolModel.Role" Width="1.5" PointX="1.5" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="preschoolModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="preschoolModel.Users" Width="1.5" PointX="0.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="preschoolModel.Results" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="preschoolModel.FK_Results_Game" ManuallyRouted="false" />
+        <AssociationConnector Association="preschoolModel.FK_Results_Game1" ManuallyRouted="false" />
+        <AssociationConnector Association="preschoolModel.FK_Results_Game2" ManuallyRouted="false" />
+        <AssociationConnector Association="preschoolModel.FK_Results_GameStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="preschoolModel.FK_Results_GameStatus1" ManuallyRouted="false" />
+        <AssociationConnector Association="preschoolModel.FK_Results_GameStatus2" ManuallyRouted="false" />
+        <AssociationConnector Association="preschoolModel.FK_User_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="preschoolModel.FK_Results_User" ManuallyRouted="false" />
+        <AssociationConnector Association="preschoolModel.FK_Results_User1" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

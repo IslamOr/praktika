@@ -1,0 +1,66 @@
+﻿<Page x:Class="praktika.page.game.game2"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:praktika.page.game"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="Игра 2">
+    <ScrollViewer VerticalScrollBarVisibility="Visible" Foreground="{x:Null}" >
+        <Grid  >
+            <Grid.Background >
+                <ImageBrush ImageSource="/Image/bg3.jpg" />
+            </Grid.Background>
+            <Grid Height="auto" Width="auto" Grid.RowSpan="1" Grid.ColumnSpan="4">
+                <Label Content="Собери Рюкзак"  VerticalAlignment="Bottom" FontSize="100" Margin="30" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center"  />
+            </Grid>
+            <Grid  Grid.ColumnSpan="4" Grid.RowSpan="4" Grid.Row="1" Background="Black" Opacity="0.4"/>
+            <Grid  Grid.ColumnSpan="4" Grid.RowSpan="4" Grid.Row="1">
+                <Border BorderThickness="3" BorderBrush="White" Width="1200" Height="200" VerticalAlignment="Top">
+                    <Grid Width="1200" Height="200" VerticalAlignment="Top"  >
+                        <Image Width="200" Height="200" HorizontalAlignment="Left" x:Name="i1"  AllowDrop="True" Drop="i1_Drop"  DragEnter="i1_DragEnter" Source="/Image/game2.image/wh.png"/>
+                        <Image Width="200" Height="200" x:Name="i2" Margin="200,0,791,-10"  AllowDrop="True" Drop="i2_Drop" DragEnter="i2_DragEnter" Source="/Image/game2.image/wh.png"/>
+                        <Image Width="200" Height="200" x:Name="i3" Margin="400,0,590,-10"  AllowDrop="True" Drop="i3_Drop" DragEnter="i3_DragEnter" Source="/Image/game2.image/wh.png"/>
+                        <Image Width="200" Height="200" x:Name="i4" Margin="600,0,390,-10"  AllowDrop="True" Drop="i4_Drop" DragEnter="i4_DragEnter" Source="/Image/game2.image/wh.png"/>
+                        <Image Width="200" Height="200" x:Name="i5" Margin="800,0,190,-10"  AllowDrop="True" Drop="i5_Drop" DragEnter="i5_DragEnter" Source="/Image/game2.image/wh.png"/>
+                        <Image Width="200" Height="200" x:Name="i6" HorizontalAlignment="Right" AllowDrop="True" Drop="i6_Drop" DragEnter="i6_DragEnter" Source="/Image/game2.image/wh.png"/>
+                    </Grid>
+                </Border>
+                <Image Source="/Image/game2.image/b2.png" Width="500" Height="550" VerticalAlignment="Top" HorizontalAlignment="Left" x:Name="b2"  Opacity="0" Margin="673,208,0,0" />
+                <Image  Source="/Image/game2.image/b1.png" Width="400" Height="500" VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="b1"  />
+                <Image Source="/Image/game2.image/a1.png" Width="200" Height="200" Margin="1152,638,551,26" x:Name="f1" MouseDown="f1_MouseDown"/>
+                <Image Source="/Image/game2.image/a2.png" Width="200" Height="200" Margin="1256,319,447,345" x:Name="f2" RenderTransformOrigin="0.99,1.07" MouseDown="f2_MouseDown"/>
+                <Image Source="/Image/game2.image/a3.png" Width="200" Height="200" Margin="368,580,1335,84" x:Name="f3" MouseDown="f3_MouseDown"/>
+                <Image Source="/Image/game2.image/a4.png" Width="200" Height="200" Margin="1645,358,58,306" x:Name="f4" MouseDown="f4_MouseDown"/>
+                <Image Source="/Image/game2.image/a5.png" Width="200" Height="200" Margin="60,319,1643,345" x:Name="f5" MouseDown="f5_MouseDown"/>
+                <Image Source="/Image/game2.image/a6.png" Width="200" Height="200" x:Name="f6" Margin="1565,638,138,26" MouseDown="f6_MouseDown"/>
+                <Image Source="/Image/game2.image/n1.png"  Width="200" Height="200" Margin="468,294,1235,370" x:Name="n1"/>
+                <Image Source="/Image/game2.image/n2.png"  Width="200" Height="200" Margin="86,616,1617,48"  x:Name="n2"/>
+                <Image Source="/Image/game2.image/n4.png"  Width="150" Height="150" Margin="1382,547,371,167"  x:Name="n3"/>
+                <Image x:Name="no1" Source="/Image/game2.image/nok.png"  Width="200" Height="200" Margin="468,294,1235,370" Opacity="0"/>
+                <Image x:Name="no2" Source="/Image/game2.image/nok.png"  Width="200" Height="200" Margin="86,616,1617,48" Opacity="0"/>
+                <Image x:Name="no3" Source="/Image/game2.image/nok.png"  Width="200" Height="200" Margin="1382,547,321,167" Opacity="0"/>
+                <Button x:Name="bn1" Width="200" Height="200" Margin="468,294,1235,370" Opacity="0" Click="bn1_Click"/>
+                <Button x:Name="bn2" Width="200" Height="200" Margin="86,616,1617,48" Opacity="0" Click="bn2_Click"/>
+                <Button x:Name="bn3" Width="200" Height="200" Margin="1382,547,321,167" Opacity="0" Click="bn3_Click"/>
+                <Button Height="100" Width="100" VerticalAlignment="Top" HorizontalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Margin="0,758,0,0" Click="Button_Click">
+                    <Image Source="/Image/game2.image/ok.png" />
+                </Button>
+            </Grid>
+            <Grid.RowDefinitions >
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition  />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+        </Grid>
+    </ScrollViewer>
+</Page>

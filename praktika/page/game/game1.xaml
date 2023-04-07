@@ -1,0 +1,78 @@
+﻿<Page x:Class="praktika.page.game.game1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:praktika.page.game"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="Игра 1">
+    <ScrollViewer VerticalScrollBarVisibility="Visible" Foreground="{x:Null}" >
+        <Grid  >
+
+            <Grid.Background >
+
+                <ImageBrush ImageSource="/Image/game1.image/back1.jpg" />
+
+            </Grid.Background>
+            <Grid Height="auto" Width="auto" Grid.RowSpan="1" Grid.ColumnSpan="4">
+                <Label Content="Выберите лишнюю фигуру"  VerticalAlignment="Center" FontSize="80" Margin="30" FontWeight="Bold" Foreground="White"  />
+            </Grid>
+            <Grid Grid.Row="1" Grid.ColumnSpan="4" VerticalAlignment="Center"  >
+                <Label x:Name="v1" Content="-" Background="#FF00E200" Width="0" Height="10"  Margin="707,230,1040,60" Opacity="0.60"/>
+                <Label x:Name="v2" Content="-" Background="#FF00E200" Width="0" Height="10"  Margin="707,230,710,60" Opacity="0.60"/>
+                <Label x:Name="v3" Content="-" Background="#FF00E200" Width="0" Height="10"  Margin="707,230,375,60" Opacity="0.60"/>
+                <Image Source="/Image/game1.image/img1.png" Height="300" HorizontalAlignment="Center" />
+                <Label x:Name="er1" Content="-" Background="RED" Width="800" Height="5" VerticalAlignment="Bottom" Margin="50" Opacity="0"/>
+            </Grid>
+            <Button x:Name="b1" Grid.Row="1" Height="120" Grid.Column="1" Margin="244,95,106,85"  Click="b1_Click" Opacity="0">
+            </Button>
+            <Button x:Name="b2" Grid.Row="1" Height="120" Grid.Column="1"  Grid.ColumnSpan="2" Margin="411,95,415,85" Click="b2_Click"  Opacity="0"/>
+            <Button x:Name="b3" Grid.Row="1" Width="120" Height="120" Grid.Column="2" Margin="104,95,251,85" Click="b3_Click"  Opacity="0"/>
+            <CheckBox Name="t1tb1" Content="1"  Grid.Column="3" Grid.Row="1" VerticalAlignment="Top"  Foreground="White" Checked="t1tb1_Checked" Margin="1,62,-1,0" Opacity="0"/>
+            <CheckBox Name="t1tb2" Content="2"  Grid.Column="3" Grid.Row="1" VerticalAlignment="Top" Foreground="White" Checked="t1tb2_Checked" Margin="1,82,-1,0" Opacity="0"/>
+            <CheckBox Name="t1tb3" Content="3"  Grid.Column="3" Grid.Row="1" VerticalAlignment="Top"  Foreground="White" Checked="t1tb3_Checked" Margin="1,102,-1,0" Opacity="0"/>
+            <Label x:Name="v4" Content="-" Background="#FF00E200" Width="0" Height="10"  Margin="707,230,1040,60" Opacity="0.60" Grid.Row="2" Grid.ColumnSpan="4"/>
+            <Label x:Name="v5" Content="-" Background="#FF00E200" Width="0" Height="10"  Margin="707,230,710,60" Opacity="0.60" Grid.Row="2" Grid.ColumnSpan="4"/>
+            <Label x:Name="v6" Content="-" Background="#FF00E200" Width="0" Height="10"  Margin="707,230,375,60" Opacity="0.60" Grid.Row="2" Grid.ColumnSpan="4"/>
+            <Image Source="/Image/game1.image/img2.png" Grid.Row="2" Grid.ColumnSpan="4" VerticalAlignment="Top" Height="300" HorizontalAlignment="Center"/>
+            <Label x:Name="er2" Content="-" Background="RED" Width="800" Height="5" VerticalAlignment="Bottom" Margin="50" Opacity="0" Grid.Row="2" Grid.ColumnSpan="4"/>
+            <Button x:Name="b4"  Width="120" Height="120" Grid.Row="2" Margin="238,95,118,85"  Grid.Column="1" Click="b4_Click" Opacity="0"/>
+            <Button x:Name="b5"  Width="120" Height="120" Grid.Row="2" Margin="416,95,415,85" Grid.Column="1" Grid.ColumnSpan="2" Click="b5_Click" Opacity="0"/>
+            <Button x:Name="b6"  Width="120" Height="120" Grid.Row="2" Margin="104,95,251,85"  Grid.Column="2" Click="b6_Click" Opacity="0"/>
+            <CheckBox Name="t2tb1" Content="1"  Grid.Column="3" Grid.Row="2" VerticalAlignment="Top" Margin="1,35,20,0" Foreground="White" Grid.ColumnSpan="3" Checked="t2tb1_Checked" Opacity="0" />
+            <CheckBox Name="t2tb2" Content="2"  Grid.Column="3" Grid.Row="2" VerticalAlignment="Top" Margin="1,55,20,0" Foreground="White" Grid.ColumnSpan="2" Checked="t2tb2_Checked" Opacity="0"/>
+            <CheckBox Name="t2tb3" Content="3"  Grid.Column="3" Grid.Row="2" VerticalAlignment="Top" Margin="1,75,20,0" Foreground="White" Grid.ColumnSpan="2" Checked="t2tb3_Checked" Opacity="0"/>
+            <Label x:Name="v7" Content="-" Background="#FF00E200" Width="0" Height="10"  Margin="707,230,1040,60" Opacity="0.60" Grid.Row="3" Grid.ColumnSpan="4" />
+            <Label x:Name="v8" Content="-" Background="#FF00E200" Width="0" Height="10"  Margin="707,230,710,60" Opacity="0.60" Grid.Row="3" Grid.ColumnSpan="4"/>
+            <Label x:Name="v9" Content="-" Background="#FF00E200" Width="0" Height="10"  Margin="707,230,375,60" Opacity="0.60" Grid.Row="3" Grid.ColumnSpan="4"/>
+            <Image Source="/Image/game1.image/img3.png" Grid.Row="3" Grid.ColumnSpan="4" VerticalAlignment="Top" Height="300" HorizontalAlignment="Center"/>
+            <Label x:Name="er3" Content="-" Background="RED" Width="800" Height="5" VerticalAlignment="Bottom" Margin="50" Opacity="0" Grid.Row="3" Grid.ColumnSpan="4"/>
+            <Button x:Name="b7"  Width="120" Height="120"  Margin="250,92,106,88" Grid.Row="3" Grid.Column="1" Click="b7_Click" Opacity="0"/>
+            <Button x:Name="b8"  Width="120" Height="120"  Margin="416,92,415,88"  Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Click="b8_Click" Opacity="0"/>
+            <Button x:Name="b9"  Width="120" Height="120"  Margin="118,92,238,88" Grid.Row="3" Grid.Column="2" Click="b9_Click" Opacity="0"/>
+            <CheckBox Name="t3tb1" Content="1"  Grid.Column="3" Grid.Row="3" VerticalAlignment="Top" Margin="1,4,19,0" Foreground="White" Checked="t3tb1_Checked" Opacity="0.01" />
+            <CheckBox Name="t3tb2" Content="2"  Grid.Column="3" Grid.Row="3" VerticalAlignment="Top" Margin="1,24,19,0" Foreground="White" Checked="t3tb2_Checked" Opacity="0.01" />
+            <CheckBox Name="t3tb3" Content="3"  Grid.Column="3" Grid.Row="3" VerticalAlignment="Top" Margin="1,44,19,0" Foreground="White" Checked="t3tb3_Checked" Opacity="0.01" />
+            <Button Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="4" Height="100" Width="250" Background="{x:Null}" Foreground="White" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="30,0,0,0" Click="Button_Click" >
+                <Image Source="/Image/game2.image/ok.png" />
+            </Button>
+            <Grid  Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="3"  Opacity="0.2">
+            </Grid>
+            <Grid.RowDefinitions >
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="100" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition  />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+        </Grid>
+    </ScrollViewer>
+</Page>
+    

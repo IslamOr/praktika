@@ -1,0 +1,86 @@
+﻿<Page x:Class="praktika.page.game.game2test"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:praktika.page.game"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="game2test">
+
+    <Grid>
+        <ScrollViewer VerticalScrollBarVisibility="Visible" Foreground="{x:Null}" >
+            <Grid Background="#FF030303" >
+                <!--<ScrollBar Name="McScroller" Grid.Column="3" Grid.RowSpan="4" HorizontalAlignment="Right" />-->
+
+                <!--<Grid Grid.ColumnSpan="4" Grid.RowSpan="2" Height="330"  Width="800" VerticalAlignment="Top" >-->
+
+                <Grid Height="auto" Width="auto" Grid.RowSpan="1" Grid.ColumnSpan="4">
+                    <Grid.Background >
+                        <!--<ImageBrush ImageSource="/Image/g1bg.jpg" />-->
+                        <ImageBrush ImageSource="/Image/game1.image/g1bg1.jpg" />
+
+                    </Grid.Background>
+
+                    <Label Content="Перетащите фигуру"  VerticalAlignment="Bottom" FontSize="50" Margin="30" FontWeight="Bold" Foreground="White"  />
+                    <Label Content="(ФИО дошкольника)" VerticalAlignment="Bottom" FontSize="20"   Foreground="White" Margin="30,0,0,0"  />
+                </Grid>
+                <Grid  Grid.ColumnSpan="4" Grid.RowSpan="3" Grid.Row="1">
+                    <StackPanel  Grid.Column="2" Width="160" HorizontalAlignment="Left" Margin="70,50,0,30">
+                        <TextBlock Height="48" Width="90" HorizontalAlignment="Center" Text="Куб" Margin="20" Name="tb1" MouseDown="tb1_MouseDown" Foreground="White" FontSize="18" FontWeight="Bold" TextAlignment="Center" />
+                        <TextBlock Height="49" Width="120" HorizontalAlignment="Center" Text="Треугольник" Margin="20" Name="tb2" MouseDown="tb2_MouseDown" Foreground="White" FontSize="18" FontWeight="Bold" TextAlignment="Center"/>
+                        <TextBlock Height="48" Width="90" HorizontalAlignment="Center" Text="Квадрат" Margin="20" Name="tb3" MouseDown="tb3_MouseDown" Foreground="White" FontSize="18" FontWeight="Bold" TextAlignment="Center"/>
+                        <TextBlock Height="48" Width="90" HorizontalAlignment="Center" Text="Ромб" Margin="20"  Name="tb4" MouseDown="tb4_MouseDown" Foreground="White" FontSize="18" FontWeight="Bold" TextAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="1" VerticalAlignment="Center" Width="160" Margin="0,60,0,0">
+
+                        <StackPanel Width="150" >
+                            <TextBlock  MinWidth="100" Height="100" AllowDrop="True" Drop="tbT_Drop"  DragEnter="DragE" x:Name="tbT" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontWeight="Bold" Foreground="White" Background="#FF46C7FF">
+                            </TextBlock>
+                        </StackPanel>
+
+                        <StackPanel Width="150" Margin="0,80,0,0">
+                            <TextBlock  MinWidth="110" Height="120" AllowDrop="True" Drop="tbT2_Drop" DragEnter="DragE" x:Name="tbT1" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" TextAlignment="Center" Foreground="White">
+                        <Image Source="/Image/game2.image/3.png" />
+                            </TextBlock>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Width="160" Margin="0,80,80,20">
+                        <StackPanel  Width="150">
+                            <TextBlock MinWidth="100" Height="140" AllowDrop="True" Drop="tbT3_Drop" DragEnter="DragE" x:Name="tbT2" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" TextAlignment="Center" Foreground="White">
+                                <Image Source="/Image/game2.image/2.png" />
+                            </TextBlock>
+                        </StackPanel>
+
+                        <StackPanel Margin="0,40,0,0" Width="150">
+                            <TextBlock MinWidth="100" Height="140" AllowDrop="True" Drop="tbT4_Drop" DragEnter="DragE" x:Name="tbT3" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" TextAlignment="Center" Foreground="White">
+                        <Image Source="/Image/game2.image/5.png" />
+                            </TextBlock>
+                        </StackPanel>
+                    </StackPanel>
+
+                </Grid>
+
+
+
+
+                <Button Content="Проверить" Grid.Column="0" Grid.Row="4" Height="40" Width="150" Background="{x:Null}" Foreground="White" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,0,0,0" Click="Button_Click"  />
+
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition  />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</Page>
